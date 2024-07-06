@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {urlConfig} from '../../config';
 
 function SearchPage() {
-    //Task 1: Define state variables for the search query, age range, and search results.
     const [searchQuery, setSearchQuery] = useState('');
     const [ageRange, setAgeRange] = useState(6); // Initialize with minimum value
     const [searchResults, setSearchResults] = useState([]);
@@ -55,12 +54,9 @@ function SearchPage() {
         }
     };
 
-     // Task 2. Fetch search results from the API based on user inputs.
-
     const navigate = useNavigate();
 
     const goToDetailsPage = (productId) => {
-        // Task 6. Enable navigation to the details page of a selected gift.
         navigate(`/app/product/${productId}`);
     };
 
@@ -71,8 +67,6 @@ function SearchPage() {
                     <div className="filter-section mb-3 p-3 border rounded">
                         <h5>Filters</h5>
                         <div className="d-flex flex-column">
-                            {/* Task 3: Dynamically generate category and condition dropdown options.*/}
-                            {/* Task 4: Implement an age range slider and display the selected value. */}
                             {/* Category Dropdown */}
                             <label htmlFor="categorySelect">Category</label>
                             <select id="categorySelect" className="form-control my-1">
@@ -104,9 +98,7 @@ function SearchPage() {
                             />
                         </div>
                     </div>
-                    {/* Task 7: Add text input field for search criteria*/}
-                    {/* Task 8: Implement search button with onClick event to trigger search:*/}
-                    {/*Task 5: Display search results and handle empty results with a message. */}
+
                     <input
                         type="text"
                         className="form-control mb-2"
